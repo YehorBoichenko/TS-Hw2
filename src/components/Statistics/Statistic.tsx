@@ -1,8 +1,13 @@
 import React from "react";
 import styles from '../Statistics/Statistic.module.css';
-import PropTypes from 'prop-types';
-
-export default function Statistic({good,neutral,bad,total,positiveStats}) {
+interface IProperties {
+    good: number,
+    neutral: number,
+    bad: number,
+    total: number,
+    positiveStats:number
+}
+export const Statistic=({good,neutral,bad,total,positiveStats}:IProperties):JSX.Element=> {
     return (
         <div className={styles.list}>
             <ul>
@@ -15,10 +20,10 @@ export default function Statistic({good,neutral,bad,total,positiveStats}) {
         </div>
     )
 }
-Statistic.propTypes = {
-    good:PropTypes.number.isRequired,
-    neutral:PropTypes.number.isRequired,
-    bad:PropTypes.number.isRequired,
-    total:PropTypes.number.isRequired,
-    positiveStats:PropTypes.number.isRequired,
-}
+// Statistic.propTypes = {
+//     good:PropTypes.number.isRequired,
+//     neutral:PropTypes.number.isRequired,
+//     bad:PropTypes.number.isRequired,
+//     total:PropTypes.number.isRequired,
+//     positiveStats:PropTypes.number.isRequired,
+// }

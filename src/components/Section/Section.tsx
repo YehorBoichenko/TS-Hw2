@@ -15,7 +15,3 @@ export const  Section = ({ title, children }:IProp):JSX.Element => {
     );
 };
 
-// Section.propTypes = {
-//     title: PropTypes.string.isRequired,
-//     children: PropTypes.object.isRequired,
-// }
